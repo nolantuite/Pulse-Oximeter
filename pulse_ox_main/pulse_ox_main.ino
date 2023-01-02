@@ -15,6 +15,9 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1); //initialize d
 
 void setup()
 {
+    //Set Pin 13 to output 5V
+    pinMode(13,HIGH);
+    digitalWrite(13,HIGH);
     Serial.begin(115200);
     //begin display
     if(!display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR)) { // Address 0x3D for 128x64
@@ -61,10 +64,10 @@ void loop()
       display.clearDisplay();
       display.setCursor(0, 0);
       display.print("BPM:");
-      display.println(65 + int(heartRate/10));
+      display.println(heartRate);
       display.setCursor(0, 20);
       display.print("SpO2:");
-      display.print(96+int(SPO2/30));
+      display.print(SPO2);
       display.println("%");  
       display.display();
       delay(500);
