@@ -2,7 +2,7 @@
 
 This project uses an Arduino Mega, OLED display (SSD1306), and a MAX30102 sensor to measure and display a person's heart rate and oxygen saturation (SpO2) levels.
 
-![Alt Text](https://media.giphy.com/media/eu6CDCVCfxqx5tDI3s/giphy-downsized-large.gif)
+![](main.gif)
 
 ## Hardware Requirements
 - Arduino Mega
